@@ -1,10 +1,10 @@
 import express from "express";
-import User from "../../models/User.ts";
+import User from "../../models/User";
 
 const router = express.Router();
 
 // GET all users
-router.get("/", async (req, res) => {
+router.get("/", async (_req, res) => {
   const users = await User.find().populate("thoughts").populate("friends");
   res.json(users);
 });

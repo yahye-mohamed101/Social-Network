@@ -1,10 +1,10 @@
 import express from "express";
-import Thought from "../../models/Thought.ts";
+import Thought from "../../models/Thought";
 
 const router = express.Router();
 
 // GET all thoughts
-router.get("/", async (req, res) => {
+router.get("/", async (_req, res) => {
   const thoughts = await Thought.find();
   res.json(thoughts);
 });

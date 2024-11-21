@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+
+# TypeScript build output
+dist/
+
+# TypeScript declaration maps (optional)
+*.d.ts.map
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MongoDB data
+data/
+dump/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE or editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Coverage directories
+coverage/
+
+# Temp files
+tmp/
+temp/
+
+# TypeScript cache
+*.tsbuildinfo
+# Local Netlify folder
+.netlify
+/.idea/
