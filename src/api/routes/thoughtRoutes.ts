@@ -33,4 +33,32 @@ router.delete("/:id", async (req, res) => {
   res.json({ message: "Thought deleted" });
 });
 
+// Add a reaction to a thought
+router.post("/:thoughtId/reactions", async (req, res) => {
+  const { thoughtId } = req.params;
+  const { reactionBody, username } = req.body;
+
+  if (!reactionBody || !username) {
+    return res.status(400).json({ error: "reactionBody and username are required" });
+  }
+
+  try {
+    // Find the thought by ID and update it with the new reaction
+    const updatedThought = await Thought.findByIdAndUpdate(
+      thoughtId,
+      { $push: { reactions: { reactionBody, username } } },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedThought) {
+      return res.status(404).json({ error: "Thought not found" });
+    }
+
+    res.status(200).json(updatedThought);
+  } catch (err) {
+    console.error("Error adding reaction:", err);
+    res.status(500).json({ error: "An error occurred while adding the reaction" });
+  }
+});
+
 export default router;
