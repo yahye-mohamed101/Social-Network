@@ -1,4 +1,13 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, { Schema, model, Document, Types } from 'mongoose';
+
+
+// Define IThought as an interface that extends Document
+interface IThought extends Document {
+  thoughtText: string;
+  username: string;
+  createdAt: String;
+  reactions: Types.DocumentArray<any>;
+}
 
 const ReactionSchema = new Schema(
   {
@@ -28,4 +37,6 @@ ThoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-export default model("Thought", ThoughtSchema);
+
+const Thought = model<IThought>('Thought', ThoughtSchema);
+export default Thought

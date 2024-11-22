@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from 'mongoose';
 
-import routes from "./api/routes"; // Centralized routes file
+import routes from "./api/routes/index.js"; // Centralized routes file
 
 dotenv.config();
 

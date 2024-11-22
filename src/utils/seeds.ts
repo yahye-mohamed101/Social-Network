@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import User from "../models/User";
-import Thought from "../models/Thought";
-import connectDB from "../config/connection"; // Ensure the connection is imported
+import User from "../models/User.js";
+import Thought from "../models/Thought.js";
+import connectDB from "../config/connection.js"; // Ensure the connection is imported
 
 dotenv.config();
 

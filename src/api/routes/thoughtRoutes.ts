@@ -1,5 +1,5 @@
 import express from "express";
-import Thought from "../../models/Thought";
+import Thought from "../../models/Thought.js";
 
 const router = express.Router();
 
