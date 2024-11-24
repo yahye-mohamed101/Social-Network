@@ -42,21 +42,21 @@ It simplifies social network management by offering a structured and scalable so
     npm run start
 
 
-- Users
-GET /api/users - Retrieve all users.
-POST /api/users - Create a new user.
-PUT /api/users/:id - Update a user by ID.
-DELETE /api/users/:id - Delete a user by ID.
-POST /api/users/:userId/friends/:friendId - Add a friend to a user.
-DELETE /api/users/:userId/friends/:friendId - Remove a friend from a user.
+## Users
+- GET /api/users - Retrieve all users.
+- POST /api/users - Create a new user.
+- PUT /api/users/:id - Update a user by ID.
+- DELETE /api/users/:id - Delete a user by ID.
+- POST /api/users/:userId/friends/:friendId - Add a friend to a user.
+- DELETE /api/users/:userId/friends/:friendId -Remove a friend from a user.
 
--Thoughts
-GET /api/thoughts - Retrieve all thoughts.
-POST /api/thoughts - Create a new thought.
-PUT /api/thoughts/:id - Update a thought by ID.
-DELETE /api/thoughts/:id - Delete a thought by ID.
-POST /api/thoughts/:thoughtId/reactions - Add a reaction to a thought.
-DELETE /api/thoughts/:thoughtId/reactions/:reactionId - Remove a reaction from a thought.
+## Thoughts
+- GET /api/thoughts - Retrieve all thoughts.
+- POST /api/thoughts - Create a new thought.
+- PUT /api/thoughts/:id - Update a thought by ID.
+- DELETE /api/thoughts/:id - Delete a thought by ID.
+- POST /api/thoughts/:thoughtId/reactions - Add a reaction to a thought.
+- DELETE /api/thoughts/:thoughtId/reactions/:reactionId - Remove a reaction from a thought.
 
 ## License
   - Please refer to this link for my license. [MIT License](https://github.com/yahye-mohamed101/Social-Network?tab=MIT-1-ov-file)
