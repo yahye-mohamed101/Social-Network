@@ -61,6 +61,12 @@ It simplifies social network management by offering a structured and scalable so
 ## License
   - Please refer to this link for my license. [MIT License](https://github.com/yahye-mohamed101/Social-Network?tab=MIT-1-ov-file)
 
+## Credits
+- Starter code provided by the University of Minnesota Web Development BootCamp.
+- Mongoose was used for database modeling and queries.
+- Express was used for building the RESTful API.
+
+
 ## How to Contribute
   - Create a new branch:
     ```bash
@@ -76,8 +82,4 @@ It simplifies social network management by offering a structured and scalable so
     git push origin <feature/name>
   - Go to the repository on GitHub and open a pull request. Make sure to compare your branch name to the main branch.
 
-## Credits
-- Starter code provided by the University of Minnesota Web Development BootCamp.
-- Mongoose was used for database modeling and queries.
-- Express was used for building the RESTful API.
 
