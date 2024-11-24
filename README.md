@@ -62,7 +62,6 @@ It simplifies social network management by offering a structured and scalable so
   - Please refer to this link for my license. [MIT License](https://github.com/yahye-mohamed101/Social-Network?tab=MIT-1-ov-file)
 
 ## Credits
-- Starter code provided by the University of Minnesota Web Development BootCamp.
 - Mongoose was used for database modeling and queries.
 - Express was used for building the RESTful API.
 
