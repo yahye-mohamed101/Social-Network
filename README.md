@@ -40,6 +40,7 @@ It simplifies social network management by offering a structured and scalable so
 -Start the server
   ```bash
     npm run start
+```bash
 
 -Users
 GET /api/users - Retrieve all users.
