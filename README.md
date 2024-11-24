@@ -37,12 +37,12 @@ It simplifies social network management by offering a structured and scalable so
 ## Usage
 [Here is the link to a video walkthrough](https://drive.google.com/file/d/10xeKY_uE_eIQRKjNhaoyCJsx_8TQHjy3/view?usp=sharing)
 
--Start the server
+- Start the server
   ```bash
     npm run start
-```bash
 
--Users
+
+- Users
 GET /api/users - Retrieve all users.
 POST /api/users - Create a new user.
 PUT /api/users/:id - Update a user by ID.
