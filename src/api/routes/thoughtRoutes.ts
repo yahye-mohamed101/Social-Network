@@ -34,7 +34,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 // Add a reaction to a thought
-router.post("/:thoughtId/reactions", async (req, res) => {
+router.post("/:thoughtId/reactions", async (req, res): Promise<any> => {
   const { thoughtId } = req.params;
   const { reactionBody, username } = req.body;
 
@@ -60,5 +60,29 @@ router.post("/:thoughtId/reactions", async (req, res) => {
     res.status(500).json({ error: "An error occurred while adding the reaction" });
   }
 });
+
+// Delete a reaction from a thought
+router.delete("/:thoughtId/reactions/:reactionId", async (req, res): Promise<any> => {
+  const { thoughtId, reactionId } = req.params;
+
+  try {
+    // Find the thought and remove the reaction
+    const updatedThought = await Thought.findByIdAndUpdate(
+      thoughtId,
+      { $pull: { reactions: { _id: reactionId } } }, // Remove the reaction by its _id
+      { new: true } // Return the updated thought
+    );
+
+    if (!updatedThought) {
+      return res.status(404).json({ error: "Thought not found" });
+    }
+
+    res.status(200).json(updatedThought);
+  } catch (err) {
+    console.error("Error deleting reaction:", err);
+    res.status(500).json({ error: "An error occurred while deleting the reaction" });
+  }
+});
+
 
 export default router;
